@@ -1,0 +1,31 @@
+DROP TABLE IF EXISTS Booking;
+  
+CREATE TABLE Booking (
+  bId INT AUTO_INCREMENT  PRIMARY KEY,
+  breakfast VARCHAR(250)  NULL,
+  roomId INT NOT  NULL,
+  totalCharge DECIMAL  NULL,
+  custId INT NULL
+  startDate DATE NULL;
+  endDate DATE NULL;
+);
+
+
+
+DROP TABLE IF EXISTS Customer;
+  
+CREATE TABLE Customer(
+  custId INT AUTO_INCREMENT  PRIMARY KEY,
+  custName VARCHAR(250)  NULL
+ );
+ 
+ 
+ DROP TABLE IF EXISTS Room;
+ CREATE TABLE Room (
+  roomId INT AUTO_INCREMENT  PRIMARY KEY,
+  roomType VARCHAR(250) NOT NULL,
+  roomPrice DECIMAL NOT NULL,
+  available VARCHAR(250)  NULL,
+  bId INT NULL  
+);
+
